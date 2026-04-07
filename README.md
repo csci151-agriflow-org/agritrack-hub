@@ -158,17 +158,17 @@ agritrack-hub/
 
 ### Home Page
 
-![Home Page](../screenshots/home-page.png)
+![Home Page](screenshots/home-page.png)
 _The main dashboard of AgriTrack Hub displaying the form to add a new crop and the list of your active crops._
 
 ### Edit Crop
 
-![Edit Crop](../screenshots/edit-crop.png)
+![Edit Crop](screenshots/edit-crop.png)
 _The form to safely update existing crop details such as the crop name, field location, and growth stage._
 
 ### Crop Item Details
 
-![Crop Item](../screenshots/crop-item.png)
+![Crop Item](screenshots/crop-item.png)
 _A detailed view of a single crop card showing its status, location, stage, notes, and the action buttons for managing it._
 
 ---
