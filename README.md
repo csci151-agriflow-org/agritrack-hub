@@ -110,15 +110,13 @@ We followed the **Conventional Commits** specification:
 
 ### Merge Conflicts Resolved
 
-[Document conflicts here]
-
-**Example:**
-
-- **Conflict:** Merge conflict in `App.tsx` when merging `feature/crop-list` into `develop`
+- **Conflict:** Merge conflict in `App.tsx` when merging `feature/crop-edit` into `develop`
 - **Files Affected:** `src/App.tsx`
-- **Cause:** Multiple members edited crop state management
-- **Resolution:** [Describe how resolved]
-- **Resolved By:** [Team Member Name]
+- **Cause:** Both `feature/crop-edit` and `develop` had independently modified `App.tsx` — specifically the import statements and the crop state handler functions (`handleAddCrop`, `handleDeleteCrop`, `handleToggleStatus`). The `feature/crop-edit` branch introduced additional imports (`useCallback`) and restructured the handlers differently from what was already integrated in `develop`, causing overlapping edits in the same sections of the file.
+- **Resolution:** Manually reviewed both versions side-by-side using GitLens in VS Code. Kept the state logic from `develop` as the base and merged in the edit-specific handlers from `feature/crop-edit`. Removed duplicate and conflicting handler definitions, then verified the app ran without errors.
+- **Resolved By:** Balajadia, Ericson
+
+![Merge Conflict](screenshots/merge-conflict.png)
 
 ---
 
@@ -170,6 +168,11 @@ _The form to safely update existing crop details such as the crop name, field lo
 
 ![Crop Item](screenshots/crop-item.png)
 _A detailed view of a single crop card showing its status, location, stage, notes, and the action buttons for managing it._
+
+### Merge Conflict Resolution
+
+![Merge Conflict](screenshots/merge-conflict.png)
+_A merge conflict encountered in `App.tsx` during branch integration, showing conflicting changes between feature branches._
 
 ---
 
