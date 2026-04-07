@@ -4,9 +4,10 @@ import CropItem from './CropItem';
 
 interface CropListProps {
   crops: Crop[];
+  onEdit: (crop: Crop) => void;
 }
 
-const CropList: React.FC<CropListProps> = ({ crops }) => {
+const CropList: React.FC<CropListProps> = ({ crops, onEdit }) => {
   // Check if the crops array is empty and display a friendly empty state message
   if (!crops || crops.length === 0) {
     return (
@@ -31,7 +32,7 @@ const CropList: React.FC<CropListProps> = ({ crops }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
       {crops.map((crop) => (
-        <CropItem key={crop.id} crop={crop} />
+        <CropItem key={crop.id} crop={crop} onEdit={onEdit} />
       ))}
     </div>
   );
