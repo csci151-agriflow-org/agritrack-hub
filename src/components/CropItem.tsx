@@ -65,7 +65,6 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
 
       {/* Action Buttons */}
       <div className="mt-5 flex flex-wrap gap-2">
-        {/* Status Toggle Button */}
         <button
           onClick={() => onToggleStatus(crop.id)}
           className={`px-3 py-1.5 text-sm rounded-md transition ${
@@ -77,7 +76,6 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
           {crop.status === 'Active' ? '🌾 Mark Harvested' : '🌱 Mark Growing'}
         </button>
 
-        {/* Edit Button */}
         <button
           onClick={() => onEdit(crop)}
           className="px-3 py-1.5 text-sm bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 transition"
@@ -85,7 +83,6 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
           ✏️ Edit
         </button>
 
-        {/* Delete Button */}
         <button
           onClick={() => onDelete(crop.id)}
           className="px-3 py-1.5 text-sm bg-red-100 text-red-700 rounded-md hover:bg-red-200 transition"
