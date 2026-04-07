@@ -8,7 +8,7 @@ A farm crop management application that helps farmers track and manage their cro
 
 | Full Name             | Role      | GitHub Username   | Assigned Atomic Task                                        |
 | --------------------- | --------- | ----------------- | ----------------------------------------------------------- |
-| Abenoja, Jaaseia Gian | Developer | @jaaseiadev       | [feature/add-crop, initialized Tailwind CSS, documentation] |
+| Abenoja, Jaaseia Gian | Developer | @jaaseiadev       | [feature/add-crop, initialized repository and Tailwind CSS, documentation] |
 | Balajadia, Ericson    | Developer | @ericsonbalajadia | [feature/crop-edit]                                         |
 | Montera, Mhac Alester | Developer | @mteraaa          | [feature/delete-crop, bugfixes, documentation]              |
 | Nocerale, Angel       | Developer | @NoSeeReally      | [feature/crop-list-display]                                 |
