@@ -5,9 +5,11 @@ import CropItem from "./CropItem";
 interface CropListProps {
   crops: Crop[];
   onToggleStatus: (id: string) => void;
+  onEdit: (crop: Crop) => void;
+  onDelete: (id: string) => void;
 }
 
-const CropList: React.FC<CropListProps> = ({ crops, onToggleStatus }) => {
+const CropList: React.FC<CropListProps> = ({ crops, onToggleStatus, onEdit, onDelete }) => {
   if (!crops || crops.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center p-12 bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl mt-6 text-center">
@@ -36,7 +38,13 @@ const CropList: React.FC<CropListProps> = ({ crops, onToggleStatus }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
       {crops.map((crop) => (
-        <CropItem key={crop.id} crop={crop} onToggleStatus={onToggleStatus} />
+        <CropItem
+          key={crop.id}
+          crop={crop}
+          onToggleStatus={onToggleStatus}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
       ))}
     </div>
   );
