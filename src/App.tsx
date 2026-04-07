@@ -3,10 +3,19 @@ import type { Crop } from "./types";
 import "./App.css";
 import CropForm from "./components/CropForm";
 import CropList from "./components/CropList";
+import FilterButtons from "./components/FilterButtons";
+
+type FilterType = "All" | "Active" | "Harvested";
 
 function App() {
   const [crops, setCrops] = useState<Crop[]>([]);
   const [editingCrop, setEditingCrop] = useState<Crop | null>(null);
+  const [selectedFilter, setSelectedFilter] = useState<FilterType>("All");
+
+  const filteredCrops = crops.filter((crop) => {
+    if (selectedFilter === "All") return true;
+    return crop.status === selectedFilter;
+  });
 
   const handleAddCrop = (crop: Crop) => {
     setCrops((prev) => [...prev, crop]);
@@ -45,8 +54,12 @@ function App() {
     <main className="min-h-screen bg-emerald-50 p-6">
       <div className="max-w-5xl mx-auto space-y-8">
         <CropForm onAddCrop={handleAddCrop} />
+        <FilterButtons
+          selectedFilter={selectedFilter}
+          onFilterChange={setSelectedFilter}
+        />
         <CropList
-          crops={crops}
+          crops={filteredCrops}
           onToggleStatus={handleToggleStatus}
           onEdit={handleEdit}
           onDelete={handleDeleteCrop}
