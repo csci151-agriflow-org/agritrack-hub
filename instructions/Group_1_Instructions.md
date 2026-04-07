@@ -13,18 +13,18 @@
 
 Your team consists of the following members:
 
-| Full Name             | GitHub Username | Assigned Atomic Task |
-| --------------------- | --------------- | -------------------- |
-| Abenoja, Jaaseia Gian | @username       |                      |
-| Balajadia, Ericson    | @username       |                      |
-| Montera, Mhac Alester | @username       |                      |
-| Nocerale, Angel       | @username       |                      |
-| Paloma, Nexus         | @username       |                      |
-| Sinday, Ruel Angelo   | @username       |                      |
+| Full Name             | GitHub Username   | Assigned Atomic Task         |
+| --------------------- | ----------------- | ---------------------------- |
+| Abenoja, Jaaseia Gian | @jaaseiadev       | Crop Record Management       |
+| Balajadia, Ericson    | @ericsonbalajadia | Edit Crop Details            |
+| Montera, Mhac Alester | @mteraaa          | Delete Crop Records          |
+| Nocerale, Angel       | @NoSeeReally      | Crop List Display            |
+| Paloma, Nexus         | @NexusfPaloma     | Growth Stage Indicators      |
+| Sinday, Ruel Angelo   | @RASinday         | Filter and Status Management |
 
 ### Team Leader Selection and Responsibilities
 
-**Team Leader:** ********\_******** (Select one team member to lead)
+**Team Leader:** Abenoja, Jaaseia Gian | @jaaseiadev (Select one team member to lead)
 
 The team leader is responsible for:
 

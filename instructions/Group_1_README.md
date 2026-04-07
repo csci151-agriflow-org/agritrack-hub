@@ -6,14 +6,14 @@ A farm crop management application that helps farmers track and manage their cro
 
 ## Team Members
 
-| Full Name | Role | GitHub Username | Assigned Atomic Task |
-|-----------|------|-----------------|---------------------|
-| Abenoja, Jaaseia Gian | Developer | @username | [Fill in specific tasks/features assigned] |
-| Balajadia, Ericson | Developer | @username | [Fill in specific tasks/features assigned] |
-| Montera, Mhac Alester | Developer | @username | [Fill in specific tasks/features assigned] |
-| Nocerale, Angel | Developer | @username | [Fill in specific tasks/features assigned] |
-| Paloma, Nexus | Developer | @username | [Fill in specific tasks/features assigned] |
-| Sinday, Ruel Angelo | Developer | @username | [Fill in specific tasks/features assigned] |
+| Full Name             | Role      | GitHub Username | Assigned Atomic Task                       |
+| --------------------- | --------- | --------------- | ------------------------------------------ |
+| Abenoja, Jaaseia Gian | Developer | @username       | [Fill in specific tasks/features assigned] |
+| Balajadia, Ericson    | Developer | @username       | [Fill in specific tasks/features assigned] |
+| Montera, Mhac Alester | Developer | @username       | [Fill in specific tasks/features assigned] |
+| Nocerale, Angel       | Developer | @username       | [Fill in specific tasks/features assigned] |
+| Paloma, Nexus         | Developer | @username       | [Fill in specific tasks/features assigned] |
+| Sinday, Ruel Angelo   | Developer | @username       | [Fill in specific tasks/features assigned] |
 
 ---
 
@@ -44,6 +44,7 @@ A farm crop management application that helps farmers track and manage their cro
 ## Setup & Installation
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - npm or yarn
 - Git
@@ -51,23 +52,26 @@ A farm crop management application that helps farmers track and manage their cro
 ### Installation Steps
 
 1. **Clone the repository**
+
    ```bash
    [Write the command to clone the repository]
    [Write the command to navigate to the project directory]
    ```
 
 2. **Install dependencies**
+
    ```bash
    [Write the command to install project dependencies]
    ```
 
 3. **Run the development server**
+
    ```bash
    [Write the command to start the development server]
    ```
 
 4. **Open your browser**
-   
+
    [Write the URL and port where your application runs]
 
 ---
@@ -109,6 +113,7 @@ We followed the **Conventional Commits** specification:
 [Document conflicts here]
 
 **Example:**
+
 - **Conflict:** Merge conflict in `App.tsx` when merging `feature/crop-list` into `develop`
 - **Files Affected:** `src/App.tsx`
 - **Cause:** Multiple members edited crop state management
@@ -146,9 +151,11 @@ agritrack-hub/
 ## Challenges & Learnings
 
 **Challenges:**
+
 - [Describe challenges faced]
 
 **Key Learnings:**
+
 - [What did the team learn about Git workflow?]
 - [What did the team learn about collaboration?]
 
@@ -173,6 +180,7 @@ agritrack-hub/
 - Sinday, Ruel Angelo - @username
 
 **Course Professors:**
+
 - Mr. Jomari Joseph A. Barrera
 - Mr. Kyle Anthony F. Nierras
 
