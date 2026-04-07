@@ -3,9 +3,10 @@ import type { Crop } from '../types';
 
 interface CropItemProps {
   crop: Crop;
+  onEdit: (crop: Crop) => void; 
 }
 
-const CropItem: React.FC<CropItemProps> = ({ crop }) => {
+const CropItem: React.FC<CropItemProps> = ({ crop, onEdit }) => {
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-5 border border-green-100 flex flex-col h-full">
       {/* Header Section: Crop Name and Status Badge */}
@@ -49,6 +50,12 @@ const CropItem: React.FC<CropItemProps> = ({ crop }) => {
       {/* Action Buttons Container - For Future Implementation */}
       <div className="mt-5 flex space-x-2">
         {/* Action buttons will go here */}
+        <button
+          onClick={() => onEdit(crop)}    // need to pass onEdit prop
+          className="px-3 py-1 bg-blue-100 text-blue-700 rounded"
+        >
+          Edit
+        </button>
       </div>
     </div>
   );
