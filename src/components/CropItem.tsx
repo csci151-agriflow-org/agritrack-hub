@@ -1,5 +1,5 @@
-import React from 'react';
-import type { Crop } from '../types';
+import React from "react";
+import type { Crop } from "../types";
 
 interface CropItemProps {
   crop: Crop;
@@ -42,7 +42,8 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
       {/* Details: Location and Growth Stage */}
       <div className="flex-grow space-y-2 text-sm text-gray-600">
         <p>
-          <strong className="text-gray-700 font-medium">Location:</strong> {crop.location}
+          <strong className="text-gray-700 font-medium">Location:</strong>{" "}
+          {crop.location}
         </p>
         <p className="flex items-center gap-2">
           <strong className="text-gray-700 font-medium">Stage:</strong>
