@@ -175,7 +175,7 @@ agritrack-hub/
 - Abenoja, Jaaseia Gian - @username
 - Balajadia, Ericson - @username
 - Montera, Mhac Alester - @username
-- Nocerale, Angel - @username
+- Nocerale, Angel - @NoSeeReally
 - Paloma, Nexus - @username
 - Sinday, Ruel Angelo - @username
 

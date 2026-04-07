@@ -203,14 +203,14 @@ You will be graded on:
 
 Before the deadline, verify:
 
-- [ ] Organization `csci151-agriflow-org` created
-- [ ] Repository `agritrack-hub` is PUBLIC
-- [ ] Professors invited to organization
-- [ ] All team members listed in README with full names
-- [ ] At least **6 feature branches** created
-- [ ] At least **18 commits** made (minimum 3 per member)
-- [ ] At least **6 pull requests** created
-- [ ] At least **2 PRs have review comments**
+- [x] Organization `csci151-agriflow-org` created
+- [x] Repository `agritrack-hub` is PUBLIC
+- [x] Professors invited to organization
+- [x] All team members listed in README with full names
+- [x] At least **6 feature branches** created
+- [x] At least **18 commits** made (minimum 3 per member)
+- [x] At least **6 pull requests** created
+- [x] At least **2 PRs have review comments**
 - [ ] README.md complete with all sections
 - [ ] Application runs without critical errors
 - [ ] `develop` merged into `main`
