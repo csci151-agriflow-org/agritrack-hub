@@ -10,19 +10,16 @@ interface CropItemProps {
 
 const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDelete }) => {
   // Helper for dynamic stage badge styling
-  const getStageBadge = () => {
-    const baseClass = "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium";
+  const getStageTheme = () => {
     switch (crop.stage) {
-      case 'Seedling':
-        return `${baseClass} bg-green-100 text-green-800`;
-      case 'Growing':
-        return `${baseClass} bg-blue-100 text-blue-800`;
-      case 'Mature':
-        return `${baseClass} bg-orange-100 text-orange-800`;
-      default:
-        return `${baseClass} bg-gray-100 text-gray-800`;
+      case 'Seedling': return { badge: 'bg-green-100 text-green-800 border-green-300', dot: 'bg-green-500' };
+      case 'Growing': return { badge: 'bg-blue-100 text-blue-800 border-blue-300', dot: 'bg-blue-500' };
+      case 'Mature': return { badge: 'bg-orange-100 text-orange-800 border-orange-300', dot: 'bg-orange-500' };
+      default: return { badge: 'bg-gray-100 text-gray-800 border-gray-300', dot: 'bg-gray-500' };
     }
   };
+
+  const theme = getStageTheme();
 
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-5 border border-green-100 flex flex-col h-full">
@@ -49,10 +46,11 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
         </p>
         <p className="flex items-center gap-2">
           <strong className="text-gray-700 font-medium">Stage:</strong>
-          <span className={getStageBadge()}>
-            {crop.stage === 'Seedling' && '🌱 Seedling'}
-            {crop.stage === 'Growing' && '🌿 Growing'}
-            {crop.stage === 'Mature' && '🌾 Mature'}
+          <span
+            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border cursor-default transition-all duration-200 hover:scale-105 hover:shadow-sm ${theme.badge}`}
+          >
+            <span className={`inline-block w-2 h-2 mr-1.5 rounded-full ${theme.dot}`}></span>
+            {crop.stage}
           </span>
         </p>
 
