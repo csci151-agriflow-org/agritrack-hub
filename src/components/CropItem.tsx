@@ -49,10 +49,23 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
         </p>
         <p className="flex items-center gap-2">
           <strong className="text-gray-700 font-medium">Stage:</strong>
-          <span className={getStageBadge()}>
-            {crop.stage === 'Seedling' && '🌱 Seedling'}
-            {crop.stage === 'Growing' && '🌿 Growing'}
-            {crop.stage === 'Mature' && '🌾 Mature'}
+          <span
+            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${
+              crop.stage === 'Seedling'
+                ? 'bg-green-100 text-green-800 border-green-300'
+                : crop.stage === 'Growing'
+                ? 'bg-blue-100 text-blue-800 border-blue-300'
+                : crop.stage === 'Mature'
+                ? 'bg-orange-100 text-orange-800 border-orange-300'
+                : 'bg-gray-100 text-gray-800 border-gray-300'
+            }`}
+          >
+            <span className={`inline-block w-2 h-2 mr-1.5 rounded-full ${
+               crop.stage === 'Seedling' ? 'bg-green-500' :
+               crop.stage === 'Growing' ? 'bg-blue-500' : 
+               crop.stage === 'Mature' ? 'bg-orange-500' : 'bg-gray-500'
+            }`}></span>
+            {crop.stage}
           </span>
         </p>
 
