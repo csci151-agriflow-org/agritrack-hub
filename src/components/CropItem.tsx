@@ -47,7 +47,7 @@ const CropItem: React.FC<CropItemProps> = ({ crop, onToggleStatus, onEdit, onDel
         <p className="flex items-center gap-2">
           <strong className="text-gray-700 font-medium">Stage:</strong>
           <span
-            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${theme.badge}`}
+            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border cursor-default transition-all duration-200 hover:scale-105 hover:shadow-sm ${theme.badge}`}
           >
             <span className={`inline-block w-2 h-2 mr-1.5 rounded-full ${theme.dot}`}></span>
             {crop.stage}
