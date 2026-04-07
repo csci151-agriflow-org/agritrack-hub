@@ -1,4 +1,4 @@
-export default interface Crop {
+export interface Crop {
   id: string;
   name: string;
   location: string;

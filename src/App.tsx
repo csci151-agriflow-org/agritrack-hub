@@ -1,59 +1,70 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import type { Crop } from "./types";
 import "./App.css";
 import CropForm from "./components/CropForm";
 import CropList from "./components/CropList";
 
 function App() {
- 
+  const [crops, setCrops] = useState<Crop[]>([]);
+  const [editingCrop, setEditingCrop] = useState<Crop | null>(null);
+
+  const handleAddCrop = (crop: Crop) => {
+    setCrops((prev) => [...prev, crop]);
+  };
+
+  const handleDeleteCrop = (id: string) => {
+    setCrops((prev) => prev.filter((crop) => crop.id !== id));
+  };
+
+  const handleToggleStatus = (id: string) => {
+    setCrops((prev) =>
+      prev.map((crop) =>
+        crop.id === id
+          ? { ...crop, status: crop.status === "Active" ? "Harvested" : "Active" }
+          : crop
+      )
+    );
+  };
+
+  const handleEdit = (crop: Crop) => {
+    setEditingCrop(crop);
+  };
+
+  const handleUpdateCrop = (updatedCrop: Crop) => {
+    setCrops((prev) =>
+      prev.map((crop) => (crop.id === updatedCrop.id ? updatedCrop : crop))
+    );
+    setEditingCrop(null);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingCrop(null);
+  };
+
   return (
-    <CropForm></CropForm>
-  )
-}
-
-export default App
-
-        {/* Filter Section */}
-        <section className="space-y-4">
-          <div className="bg-white rounded-xl shadow-sm border border-emerald-100 p-4">
-            <h2 className="text-lg font-semibold text-emerald-800 mb-3">
-              Filter Crops
-            </h2>
-            <FilterButtons
-              selectedFilter={selectedFilter}
-              onFilterChange={setSelectedFilter}
-            />
-          </div>
-
-          <CropList
-            crops={filteredCrops}
-            onToggleStatus={handleToggleStatus}
-            onEdit={handleEdit}
-            onDelete={handleDelete}
-          />
-        </section>
+    <main className="min-h-screen bg-emerald-50 p-6">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <CropForm onAddCrop={handleAddCrop} />
+        <CropList
+          crops={crops}
+          onToggleStatus={handleToggleStatus}
+          onEdit={handleEdit}
+          onDelete={handleDeleteCrop}
+        />
       </div>
 
-      {/* Modal Form for Add/Edit */}
-      {showForm && (
+      {editingCrop && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <CropForm
-            onAddCrop={handleAddCrop}
-            onUpdateCrop={handleUpdateCrop}
+            isEditing
             initialData={editingCrop}
-            isEditing={!!editingCrop}
-            onCancel={() => {
-              setShowForm(false);
-              setEditingCrop(null);
-            }}
+            onUpdateCrop={handleUpdateCrop}
+            onCancel={handleCancelEdit}
           />
         </div>
       )}
     </main>
   );
-};
+}
 
 export default App;
